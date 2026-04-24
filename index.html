@@ -251,6 +251,11 @@
   .stock-card:nth-child(3) { animation-delay: 0.19s; }
   .stock-card:nth-child(4) { animation-delay: 0.26s; }
   .stock-card:nth-child(5) { animation-delay: 0.33s; }
+  .stock-card:nth-child(6) { animation-delay: 0.40s; }
+  .stock-card:nth-child(7) { animation-delay: 0.47s; }
+  .stock-card:nth-child(8) { animation-delay: 0.54s; }
+  .stock-card:nth-child(9) { animation-delay: 0.61s; }
+  .stock-card:nth-child(10) { animation-delay: 0.68s; }
 
   @keyframes slideIn {
     to { opacity: 1; transform: translateY(0); }
@@ -480,12 +485,12 @@ async function askClaude(apiKey, fgData) {
   const sentiment = ratingLabel(fgData.score);
   const prompt = `The CNN Fear & Greed Index is currently at ${fgData.score}/100 (${sentiment}).
 
-Based on this market sentiment level, recommend exactly 5 stocks that are well-suited to the current environment. Consider:
+Based on this market sentiment level, recommend exactly 10 stocks that are well-suited to the current environment. Consider:
 - At extreme fear/fear: defensive, dividend, value stocks or beaten-down quality names
 - At neutral: balanced mix of growth and value
 - At greed/extreme greed: momentum stocks, but flag elevated risk
 
-Respond ONLY with a valid JSON array of exactly 5 objects. No markdown, no explanation outside the JSON.
+Respond ONLY with a valid JSON array of exactly 10 objects. No markdown, no explanation outside the JSON.
 Each object must have these exact keys:
 {
   "ticker": "AAPL",
